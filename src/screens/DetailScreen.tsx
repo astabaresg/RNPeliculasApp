@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
   },
   backButton:{
     position:'absolute',
-    backgroundColor:colores.primary,
+    backgroundColor:'black',
     borderRadius:100,
     zIndex:999,
     elevation:9,
