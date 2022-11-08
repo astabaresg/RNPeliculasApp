@@ -10,6 +10,7 @@ import {appTheme, colores} from '../theme/appTheme';
 import {GradientBackground} from '../components/GradientBackground';
 import { getImageColors } from '../helpers/getColores';
 import { GradientContext } from '../context/GradientContext';
+import messaging from '@react-native-firebase/messaging';
 
 
 const {width: windowWidth} = Dimensions.get('window');
