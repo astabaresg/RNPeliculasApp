@@ -90,6 +90,7 @@
 		13B07FAE1A68108700A75B9A /* RNPeliculasApp */ = {
 			isa = PBXGroup;
 			children = (
+				13D029032919A492006907BF /* GoogleService-Info.plist */,
 				13D029052919A667006907BF /* RNPeliculasApp.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -129,7 +130,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13D029032919A492006907BF /* GoogleService-Info.plist */,
 				13F8131928FE61CF00673A18 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* RNPeliculasApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,

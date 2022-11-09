@@ -3,7 +3,9 @@ import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Navigation } from './src/navigation/Navigation';
 import { GradientProvider } from './src/context/GradientContext';
-import messaging from '@react-native-firebase/messaging';
+import { NotificationListener, requestUserPermission } from './src/helpers/pushNotificationManager';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
 
 const AppState = ({children}:any) =>{
   return(
@@ -15,25 +17,8 @@ const AppState = ({children}:any) =>{
 
 const App = () => {
   useEffect(() => {
-    const normalSubscriber = messaging().onMessage(async message =>{
-      console.log('Nuevo mensaje', JSON.stringify(message));
-    });
-
-    const topicSubscriber = messaging().subscribeToTopic('terror').then(()=>{
-      console.log('Sucrito al tema de terror');
-    })
-
-    const topicSubscriber2 = messaging().subscribeToTopic('accion').then(()=>{
-      console.log('Sucrito al tema de accion');
-    })
-
-    const backgroundSubscriber = messaging().setBackgroundMessageHandler(async message =>{
-      console.log('Notificación en background', message);
-    })
-  
-    return () => {
-      normalSubscriber();
-    }
+    requestUserPermission();
+    NotificationListener();
   }, [])
   return (
     <NavigationContainer>
