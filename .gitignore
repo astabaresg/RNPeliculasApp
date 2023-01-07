@@ -65,4 +65,3 @@ buck-out/
 android/app/google-services.json
 ios/GoogleService-Info.plist
 src/api/movieDB.tsx
-src/api/movieDB.tsx
